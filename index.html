@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>С Днём Рождения, Всеволод!</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to top right, #1e3c72, #2a5298);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 24px;
+      border-radius: 16px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #ffd700;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 12px 0;
+    }
+
+    footer {
+      margin-top: 24px;
+      font-style: italic;
+      color: #ffcccc;
+    }
+
+    button {
+      margin-top: 24px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background: #ffd700;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #ffec60;
+    }
+
+    .poster-container {
+      margin-top: 20px;
+      display: none;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .poster-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 24px; }
+      p { font-size: 16px; }
+      button { font-size: 16px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>С днём рождения, Всеволод!</h1>
+    <p>Ты — человек, который не боится идти один,<br>
+    и в этом — твоя невероятная сила.</p>
+    <p>Ты умеешь находить красоту в дороге,<br>
+    смысл в тишине, и свободу в движении.</p>
+    <p>Пусть каждый день дарит тебе вдохновение,<br>
+    а мир — встречи, которые оставляют след.</p>
+    <p>Пусть дом будет там, где тебе хорошо.<br>
+    Ты достоин самого лучшего. С праздником! 🎈🌍</p>
+
+    <button onclick="showPoster()">Подарок 🎁</button>
+
+    <div id="poster" class="poster-container">
+      <img src="poster.jpg" alt="Подарочный постер">
+    </div>
+
+    <footer>С любовью, Пух</footer>
+  </div>
+
+  <script>
+    function showPoster() {
+      const poster = document.getElementById('poster');
+      poster.style.display = 'block';
+      poster.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
